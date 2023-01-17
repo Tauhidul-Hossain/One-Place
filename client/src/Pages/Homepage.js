@@ -164,13 +164,13 @@ function Homepage() {
               <PaymentsRoundedIcon />
             </div> */}
 
-            {/* <div className="topPanelDataSummary">
-              <p>Income</p>
+            <div className="topPanelDataSummary">
+              {/* <p>Income</p>
               <h3 className="maincolor topPanelDataText">
                 {getTotalSumOfDateRange()}
                 TK
-              </h3>
-            </div> */}
+              </h3> */}
+            </div>
 
             <div className="topPanelSeperator"></div>
             <div>

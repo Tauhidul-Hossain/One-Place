@@ -183,20 +183,20 @@ function Orders() {
                 <li
                   className={`${filterActive === 2 ? "active" : ""}`}
                   onClick={() => {
-                    setFilterOrders("Open");
+                    setFilterOrders("Visit");
                     setFilterActive(2);
                   }}
                 >
-                  Open
+                  Visit
                 </li>
                 <li
                   className={`${filterActive === 3 ? "active" : ""}`}
                   onClick={() => {
-                    setFilterOrders("Closed");
+                    setFilterOrders("Open");
                     setFilterActive(3);
                   }}
                 >
-                  Closed
+                  Open
                 </li>
                 <li
                   className={`${filterActive === 4 ? "active" : ""}`}
@@ -206,6 +206,15 @@ function Orders() {
                   }}
                 >
                   Completed
+                </li>
+                <li
+                  className={`${filterActive === 4 ? "active" : ""}`}
+                  onClick={() => {
+                    setFilterOrders("Canceld");
+                    setFilterActive(4);
+                  }}
+                >
+                  Canceld
                 </li>
               </ul>
             </div>
@@ -479,9 +488,10 @@ function Orders() {
                     }
                     required="required"
                   >
+                    <option>Visit</option>
                     <option>Open</option>
-                    <option>Closed</option>
                     <option>Completed</option>
+                    <option>Canceld</option>
                   </select>
                 </div>
               </div>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2022 at 12:04 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+-- Generation Time: Jan 17, 2023 at 11:42 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,14 +33,16 @@ CREATE TABLE `accounts` (
   `password` text DEFAULT NULL,
   `role` text DEFAULT NULL,
   `dateCreated` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `accounts`
 --
 
 INSERT INTO `accounts` (`id`, `username`, `password`, `role`, `dateCreated`) VALUES
-(1, 'admin', '$2b$10$J1JTnk4KtLylMznNjWlRsOKPvsDEYDX.xyP77EY/Gq1JpccSnr3qa', 'admin', '2022-10-25');
+(1, 'Tanmoy', '$2b$10$yzQEKgrYZ.az4UVxNN..SuiSRymk70pU9AFtz6TXqg9.QJN9vVpq2', 'admin', '2023-01-14'),
+(2, 'Rifat', '$2b$10$4f5kvOfDXhQAvd7L7lTF8OVngM49aEKmO6.fMtLKOPJBqdpi5yrNW', 'admin', '2023-01-14'),
+(3, 'IT', '$2b$10$AWd8WgcPYISwUB8Cgj9w/OcAc3WJs7nyrIvUq.DsGceb4N3pQg3e2', '', '2023-01-15');
 
 -- --------------------------------------------------------
 
@@ -56,7 +58,7 @@ CREATE TABLE `calendar` (
   `hours` text DEFAULT NULL,
   `addDate` date DEFAULT NULL,
   `worker` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
 -- --------------------------------------------------------
 
@@ -65,7 +67,7 @@ CREATE TABLE `calendar` (
 --
 
 CREATE TABLE `clients` (
-  `client_id` int(15) NOT NULL,
+  `client_id` int(3) NOT NULL,
   `client` text DEFAULT NULL,
   `clientDetails` text DEFAULT NULL,
   `mobile` text DEFAULT NULL,
@@ -74,7 +76,7 @@ CREATE TABLE `clients` (
   `city` text DEFAULT NULL,
   `postalCode` text DEFAULT NULL,
   `clientDateCreated` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
 -- --------------------------------------------------------
 
@@ -85,11 +87,11 @@ CREATE TABLE `clients` (
 CREATE TABLE `orders` (
   `id` int(15) NOT NULL,
   `client_id` int(15) NOT NULL,
-  `date` date DEFAULT NULL,
+  `date` datetime DEFAULT NULL,
   `price` float DEFAULT NULL,
   `status` text DEFAULT NULL,
   `workerName` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
 -- --------------------------------------------------------
 
@@ -104,7 +106,7 @@ CREATE TABLE `services` (
   `amount` int(5) DEFAULT NULL,
   `itemPrice` float DEFAULT NULL,
   `totalPrice` float DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
 --
 -- Indexes for dumped tables
@@ -148,7 +150,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `calendar`
@@ -160,7 +162,7 @@ ALTER TABLE `calendar`
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `client_id` int(15) NOT NULL AUTO_INCREMENT;
+  MODIFY `client_id` int(3) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `orders`

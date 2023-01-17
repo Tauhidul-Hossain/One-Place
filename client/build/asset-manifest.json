@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "./static/css/main.994d78ad.css",
+    "main.js": "./static/js/main.ecfac119.js",
+    "static/media/VarelaRound-Regular.ttf": "./static/media/VarelaRound-Regular.3b7ffe17ffd5b4e3c72f.ttf",
+    "static/media/CircularStd-Bold.woff2": "./static/media/CircularStd-Bold.7635c1bc788a9c68bf95.woff2",
+    "static/media/CircularStd-Medium.woff2": "./static/media/CircularStd-Medium.8ddebbe182975aae0c9a.woff2",
+    "static/media/CircularStd-Book.woff2": "./static/media/CircularStd-Book.5f7f3d61a321e3838310.woff2",
+    "index.html": "./index.html",
+    "main.994d78ad.css.map": "./static/css/main.994d78ad.css.map",
+    "main.ecfac119.js.map": "./static/js/main.ecfac119.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.994d78ad.css",
+    "static/js/main.ecfac119.js"
+  ]
+}

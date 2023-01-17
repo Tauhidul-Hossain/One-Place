@@ -418,9 +418,10 @@ function OrderPage() {
                     }
                     required="required"
                   >
+                    <option>Visit</option>
                     <option>Open</option>
-                    <option>Closed</option>
                     <option>Completed</option>
+                    <option>Canceld</option>
                   </select>
                 </div>
               </div>
